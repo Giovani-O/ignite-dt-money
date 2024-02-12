@@ -15,6 +15,14 @@
       "category": "Alimentação",
       "price": 40,
       "createdAt": "2024-02-11T14:07:53.503Z"
+    },
+    {
+      "id": 3,
+      "description": "Seizi Musashi Titanium",
+      "type": "outcome",
+      "category": "Hobbies",
+      "price": 2499,
+      "createdAt": "2024-02-12T15:14:53.503Z"
     }
   ]
 }
