@@ -39,6 +39,11 @@ export const Content = styled(Dialog.Content)`
       &::placeholder {
         color: ${(props) => props.theme['primary-500']};
       }
+
+      &:disabled {
+        opacity: 0.6;
+        cursor: wait;
+      }
     }
 
     /* Chrome, Safari, Edge, Opera */
@@ -63,9 +68,16 @@ export const Content = styled(Dialog.Content)`
       border-radius: 6px;
       margin-top: 1.5rem;
       cursor: pointer;
-      transition: background-color 0.2s;
+      transition:
+        background-color 0.2s,
+        opacity 0.2s;
 
-      &:hover {
+      &:disabled {
+        opacity: 0.6;
+        cursor: wait;
+      }
+
+      &:not(:disabled):hover {
         background: ${(props) => props.theme['secondary-700']};
       }
     }

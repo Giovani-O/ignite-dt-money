@@ -11,9 +11,14 @@ export const SearchFormContainer = styled.form`
     background: ${(props) => props.theme['primary-900']};
     color: ${(props) => props.theme['primary-300']};
     padding: 1rem;
+    transition: opacity 0.2s;
 
     &::placeholder {
       color: ${(props) => props.theme['primary-500']};
+    }
+
+    &:disabled {
+      opacity: 0.6;
     }
   }
 
@@ -35,7 +40,12 @@ export const SearchFormContainer = styled.form`
       color 0.2s,
       border-color 0.2s;
 
-    &:hover {
+    &:disabled {
+      opacity: 0.6;
+      cursor: wait;
+    }
+
+    &:not(:disabled):hover {
       background: ${(props) => props.theme['secondary-500']};
       border: 1px solid ${(props) => props.theme['secondary-500']};
       color: ${(props) => props.theme.white};
