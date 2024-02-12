@@ -23,6 +23,46 @@
       "category": "Hobbies",
       "price": 2499,
       "createdAt": "2024-02-12T15:14:53.503Z"
+    },
+    {
+      "description": "Zoom G5n",
+      "price": 3500,
+      "category": "Hobbies",
+      "type": "outcome",
+      "createdAt": "2024-02-12T18:28:16.988Z",
+      "id": 4
+    },
+    {
+      "description": "Salário",
+      "price": 30000,
+      "category": "Emprego",
+      "type": "income",
+      "createdAt": "2024-02-12T18:28:52.140Z",
+      "id": 5
+    },
+    {
+      "description": "Boss Katana 100 Mk.2",
+      "price": 4498,
+      "category": "Hobbies",
+      "type": "outcome",
+      "createdAt": "2024-02-12T18:31:18.027Z",
+      "id": 6
+    },
+    {
+      "description": "PLR",
+      "price": 8900,
+      "category": "Emprego",
+      "type": "income",
+      "createdAt": "2024-02-12T18:32:09.319Z",
+      "id": 7
+    },
+    {
+      "description": "Ibanez RGA42BAM",
+      "price": 3999,
+      "category": "Hobbies",
+      "type": "outcome",
+      "createdAt": "2024-02-12T18:45:07.046Z",
+      "id": 8
     }
   ]
 }
