@@ -64,11 +64,11 @@ export const defaultLight = {
   'secondary-500': '#6366f1',
   'secondary-700': '#818cf8',
 
-  'green-300': '#015F43',
-  'green-500': '#00875F',
+  'green-300': '#00875F',
+  'green-500': '#015F43',
   'green-700': '#00B37E',
 
-  'red-300': '#7A1921',
-  'red-500': '#AB222E',
+  'red-300': '#AB222E',
+  'red-500': '#7A1921',
   'red-700': '#F75A68',
 } as defaultTheme
