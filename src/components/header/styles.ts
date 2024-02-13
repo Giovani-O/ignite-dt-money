@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Moon, Sun } from 'phosphor-react'
+import * as Tooltip from '@radix-ui/react-tooltip'
 
 export const HeaderContainer = styled.header`
   background: ${(props) => props.theme['primary-900']};
@@ -65,4 +66,19 @@ export const ToggleLightTheme = styled(Sun)`
   &:hover {
     background-color: ${(props) => props.theme['primary-700']};
   }
+`
+
+export const TooltipContent = styled(Tooltip.Content)`
+  background-color: black;
+  color: ${(props) => props.theme.white};
+  opacity: 0.6;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: none;
+  box-shadow: none;
+`
+
+export const TooltipArrow = styled(Tooltip.Arrow)`
+  fill: black;
+  color: ${(props) => props.theme.white};
 `
