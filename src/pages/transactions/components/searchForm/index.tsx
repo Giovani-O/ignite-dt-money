@@ -5,6 +5,7 @@ import * as z from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { TransactionsContext } from '../../../../contexts/TransactionsContext'
 import { useContextSelector } from 'use-context-selector'
+import { memo } from 'react'
 
 const searchFormSchema = z.object({
   query: z.string(),
@@ -12,7 +13,7 @@ const searchFormSchema = z.object({
 
 type SearchFormInputs = z.infer<typeof searchFormSchema>
 
-export function SearchForm() {
+function SearchFormComponent() {
   const fetchTransactions = useContextSelector(
     TransactionsContext,
     (context) => {
@@ -47,3 +48,15 @@ export function SearchForm() {
     </SearchFormContainer>
   )
 }
+
+export const SearchForm = memo(SearchFormComponent)
+
+/*
+  O memo verifica se houve alguma mudança nos hooks ou props do componente.
+  Se houve, ele permite a nova renderização do componente.
+  Se não houve, a nova renderização não acontece.
+
+  !!!IMPORTANTE!!!
+  Usar memo apenas em componentes muito grandes.
+  Nesse caso, ele está em um componente pequeno apenas para demonstrar seu funcionamento.
+*/
