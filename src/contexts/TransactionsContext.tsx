@@ -33,6 +33,8 @@ interface TransactionProviderProps {
 export function TransactionsProvider({ children }: TransactionProviderProps) {
   const [transactions, setTransactions] = useState<Transaction[]>([])
 
+  // useCallback só permite que uma função seja recriada na memória se algum dos inputs mudar
+  // No array de dependências, é colocado qualquer valor que vem de fora da função e que não é um parametro
   const fetchTransactions = useCallback(async (query?: string) => {
     const response = await api.get('/transactions', {
       params: {
@@ -45,8 +47,6 @@ export function TransactionsProvider({ children }: TransactionProviderProps) {
     setTransactions(response.data)
   }, [])
 
-  // useCallback só permite que uma função seja recriada na memória se algum dos inputs mudar
-  // No array de dependências, é colocado qualquer valor que vem de fora da função e que não é um parametro
   const createTransaction = useCallback(
     async (data: CreateTransactionInput) => {
       const { description, price, category, type } = data
@@ -66,7 +66,7 @@ export function TransactionsProvider({ children }: TransactionProviderProps) {
 
   useEffect(() => {
     fetchTransactions()
-  }, [])
+  }, [fetchTransactions])
 
   return (
     <TransactionsContext.Provider
