@@ -71,6 +71,22 @@
       "type": "income",
       "createdAt": "2024-02-12T18:51:51.132Z",
       "id": 9
+    },
+    {
+      "description": " Boss GT-100",
+      "price": 4499,
+      "category": "Hobbies",
+      "type": "outcome",
+      "createdAt": "2024-02-13T14:42:44.777Z",
+      "id": 10
+    },
+    {
+      "description": "Bonus (Comissão)",
+      "price": 45000,
+      "category": "Emprego",
+      "type": "income",
+      "createdAt": "2024-02-13T14:43:15.760Z",
+      "id": 11
     }
   ]
 }
