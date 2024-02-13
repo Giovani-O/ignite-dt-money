@@ -11,7 +11,7 @@ export const SearchFormContainer = styled.form`
     background: ${(props) => props.theme['primary-900']};
     color: ${(props) => props.theme['primary-300']};
     padding: 1rem;
-    transition: opacity 0.2s;
+    /* transition: opacity 0.2s; */
 
     &::placeholder {
       color: ${(props) => props.theme['primary-500']};
@@ -35,10 +35,10 @@ export const SearchFormContainer = styled.form`
     font-weight: bold;
     border-radius: 6px;
     cursor: pointer;
-    transition:
+    /* transition:
       background-color 0.2s,
       color 0.2s,
-      border-color 0.2s;
+      border-color 0.2s; */
 
     &:disabled {
       opacity: 0.6;

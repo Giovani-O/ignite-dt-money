@@ -5,6 +5,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: background-color 0.2s, color 0.2s, opacity 0.2s, border-color 0.2s;
   }
 
   :focus {

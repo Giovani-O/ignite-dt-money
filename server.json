@@ -87,6 +87,14 @@
       "type": "income",
       "createdAt": "2024-02-13T14:43:15.760Z",
       "id": 11
+    },
+    {
+      "description": "Barra de chocolate amargo",
+      "price": 7,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2024-02-13T16:31:37.986Z",
+      "id": 12
     }
   ]
 }

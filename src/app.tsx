@@ -2,15 +2,19 @@ import { ThemeProvider } from 'styled-components'
 import { defaultDark, defaultLight } from './styles/themes/default'
 import { GlobalStyle } from './styles/global'
 import { Transactions } from './pages/transactions'
-import { TransactionsProvider } from './contexts/TransactionsContext'
+import { TransactionsContext } from './contexts/TransactionsContext'
+import { useContextSelector } from 'use-context-selector'
 
 export function App() {
+  const activeTheme = useContextSelector(TransactionsContext, (context) => {
+    return context.activeTheme
+  })
+
   return (
-    <ThemeProvider theme={defaultLight}>
+    <ThemeProvider theme={activeTheme === 'light' ? defaultLight : defaultDark}>
       <GlobalStyle />
-      <TransactionsProvider>
-        <Transactions />
-      </TransactionsProvider>
+
+      <Transactions />
     </ThemeProvider>
   )
 }

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Moon, Sun } from 'phosphor-react'
 
 export const HeaderContainer = styled.header`
   background: ${(props) => props.theme['primary-900']};
@@ -32,9 +33,36 @@ export const NewTransactionButton = styled.button`
   padding: 0 1.25rem;
   border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.2s;
+  /* transition: background-color 0.2s; */
 
   &:hover {
     background: ${(props) => props.theme['secondary-700']};
+  }
+`
+export const ToggleDarkTheme = styled(Moon)`
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  padding: 0.5rem;
+  color: ${(props) => props.theme['primary-100']};
+  cursor: pointer;
+  /* transition: background-color 0.2s; */
+
+  &:hover {
+    background-color: ${(props) => props.theme['primary-700']};
+  }
+`
+
+export const ToggleLightTheme = styled(Sun)`
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  padding: 0.5rem;
+  color: ${(props) => props.theme['primary-100']};
+  cursor: pointer;
+  /* transition: background-color 0.2s; */
+
+  &:hover {
+    background-color: ${(props) => props.theme['primary-700']};
   }
 `
